@@ -1,10 +1,10 @@
-let find = (items,findElementGreaterOrEqualToFour) => {
-    let result = false
+const find = (items,findElementGreaterOrEqualToFour) => {
+    if (items.length !== 0 ) {
+        let isNumberFoundInItemsArray = false
     let foundedNumber = null
     for (let num of items) {
-        result = findElementGreaterOrEqualToFour(num)
-        //console.log(result)
-        if (result) {
+        isNumberFoundInItemsArray = findElementGreaterOrEqualToFour(num)
+        if (isNumberFoundInItemsArray) {
             foundedNumber = num
             break
         } else {
@@ -12,6 +12,10 @@ let find = (items,findElementGreaterOrEqualToFour) => {
         }
     }
     return foundedNumber
+    } else {
+        return 'The array you passed as an argument is empty'
+    }
+
 }
 
 module.exports = find
