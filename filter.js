@@ -1,14 +1,17 @@
-let filter = (items,findElementsGreaterOrEqualToFour) => {
-    let result = false
-    let foundedNumberArray =  [] 
-    for (let num of items) {
-        result = findElementsGreaterOrEqualToFour(num)
-        //console.log(result)
-        if (result) {
-            foundedNumberArray.push(num)
+const filter = (items,findElementsGreaterOrEqualToFour) => {
+    if (items.length !== 0) {
+        let isNumberGreaterThanOrEqualToGivenNumber = false
+        const foundedNumbersArray =  []
+        for (let num of items) {
+            isNumberGreaterThanOrEqualToGivenNumber = findElementsGreaterOrEqualToFour(num)
+            if (isNumberGreaterThanOrEqualToGivenNumber) {
+                foundedNumbersArray.push(num)
+            }
         }
+       return foundedNumbersArray
+    } else {
+        return 'The array you passed as an argument is empty'
     }
-    return foundedNumberArray
 }
 
 module.exports = filter
