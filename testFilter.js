@@ -1,9 +1,7 @@
-let filter = require('./filter')
+const filter = require('./filter')
 const items = [1,2,3,4,5,5]
-function findElementsGreaterOrEqualToFour(number) {
-    return number >= 4
-}
+const fiiterElementsGreaterOrEqualToGivenNumber = (number, givenNumberToFilter = 2) => number >= givenNumberToFilter
 
-const result = filter(items,findElementsGreaterOrEqualToFour)
+const resultOfFilter = filter(items,fiiterElementsGreaterOrEqualToGivenNumber)
 
-console.log(result)
+console.log(resultOfFilter)
