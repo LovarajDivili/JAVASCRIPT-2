@@ -1,9 +1,8 @@
-let reduce = require('./reduce')
+const reduce = require('./reduce')
 
-function reducerFunction(startingElement,secondElement) {
-    return startingElement + secondElement
-}
+const reducerFunction= (startingElement,secondElement) =>  startingElement + secondElement
 
 const items = [1,2,3,4,5,5]
-const result = reduce(items,reducerFunction,0)
-console.log(result)
+
+const resultOfReduce = reduce(items,reducerFunction)
+console.log(resultOfReduce)
