@@ -1,7 +1,7 @@
-let flatten = require('./flatten')
+const flatten = require('./flatten')
 
-let nestedArray = [1, [2], [[3]], [[[4]]]]
+const nestedArray = [1, [2], [[3]], [[[4]]]]
 
-const result = flatten(nestedArray)
+const resultOfFlatten = flatten(nestedArray)
 
-console.log(result)
+console.log(resultOfFlatten)
